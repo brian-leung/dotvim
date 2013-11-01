@@ -30,6 +30,8 @@ au BufNewFile,BufRead *.module set ft=php
 au BufNewFile,BufRead *.install set ft=php
 au BufNewFile,BufRead *.inc set ft=php
 
+au BufRead,BufNewFile *.md set filetype=markdown
+
 set viminfo=%,'50,\"100,n~/.viminfo
 let @d='idefault_array_get(^[/[^Mxi, ^[/]^Mr)?default^M'
 
