@@ -10,6 +10,9 @@ set expandtab
 set smarttab
 set autoindent
 
+set pastetoggle=<F2>
+
+filetype on
 filetype plugin on
 filetype plugin indent on
 set softtabstop=2
@@ -41,3 +44,4 @@ let @d='idefault_array_get(^[/[^Mxi, ^[/]^Mr)?default^M'
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
+
