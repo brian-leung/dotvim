@@ -2,6 +2,8 @@ filetype off
 call pathogen#incubate()
 call pathogen#helptags()
 
+set t_Co=256
+set encoding=utf8
 set vb
 set history=256
 set nu
