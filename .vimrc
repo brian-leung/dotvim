@@ -2,32 +2,31 @@ filetype off
 call pathogen#incubate()
 call pathogen#helptags()
 
+filetype on
+filetype plugin on
+filetype plugin indent on
+syntax on
+
 set t_Co=256
 set encoding=utf8
 set vb
-set history=256
 set nu
+
 set ignorecase smartcase
 set expandtab
 set smarttab
 set autoindent
 
-set pastetoggle=<F2>
-
-filetype on
-filetype plugin on
-filetype plugin indent on
 set softtabstop=2
 set shiftwidth=2
 
-syntax on
+set pastetoggle=<F2>
 
 set backup
 set backupdir=~/.vim/backups
 set directory=~/.vim/tmp
 
 au BufNewFile,BufRead *.py setlocal softtabstop=4 shiftwidth=4
-autocmd BufWritePost *.py call Flake8()
 
 au BufNewFile,BufRead *.html set ft=html
 
@@ -46,4 +45,3 @@ let @d='idefault_array_get(^[/[^Mxi, ^[/]^Mr)?default^M'
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
-
