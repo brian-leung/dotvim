@@ -1,4 +1,5 @@
 filetype off
+let g:pathogen_disabled = ['minibufexpl']
 call pathogen#incubate()
 call pathogen#helptags()
 
@@ -9,6 +10,7 @@ syntax on
 
 set t_Co=256
 set encoding=utf8
+set history=1024
 set vb
 set nu
 
@@ -28,10 +30,7 @@ set directory=~/.vim/tmp
 
 au BufNewFile,BufRead *.py setlocal softtabstop=4 shiftwidth=4
 
-au BufNewFile,BufRead *.html set ft=html
-
 au BufNewFile,BufRead *.rake set ft=ruby
-
 au BufNewFile,BufRead *.module set ft=php
 au BufNewFile,BufRead *.install set ft=php
 au BufNewFile,BufRead *.inc set ft=php
