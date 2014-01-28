@@ -37,6 +37,9 @@ let g:syntastic_enable_signs = 1    " Put errors on left side
 let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_auto_loc_list = 2   " Only show errors when I ask
 let g:syntastic_disabled_filetypes = ['html', 'js']
+
+let g:syntastic_python_flake8_args = "--max-line-length=100"
+
 let g:syntastic_cpp_check_header = 1
 let g:syntastic_cpp_no_include_search = 1
 let g:syntastic_cpp_compiler = 'g++'
@@ -52,6 +55,8 @@ else
         let g:syntastic_warning_symbol = '.'
         let g:syntastic_style_warning_symbol = '>'
 endif
+
+
 
 au BufNewFile,BufRead *.py setlocal softtabstop=4 shiftwidth=4
 
