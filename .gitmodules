@@ -34,3 +34,6 @@
 [submodule "bundle/vim-jinja"]
 	path = bundle/vim-jinja
 	url = git://github.com/mitsuhiko/vim-jinja.git
+[submodule "bundle/vim-web-indent"]
+	path = bundle/vim-web-indent
+	url = https://github.com/lukaszb/vim-web-indent.git
