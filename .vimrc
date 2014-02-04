@@ -39,12 +39,15 @@ let g:ctrlp_custom_ignore = {
   \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
 \ }
 
+let g:syntastic_javascript_checkers = ['jshint']
+
 let g:syntastic_check_on_open = 1
 let g:syntastic_enable_signs = 1    " Put errors on left side
-let g:syntastic_quiet_messages = {'level': 'warnings'}
+" let g:syntastic_quiet_messages = {'level': 'warnings'}
 let g:syntastic_auto_loc_list = 2   " Only show errors when I ask
-let g:syntastic_disabled_filetypes = ['html', 'js']
+let g:syntastic_disabled_filetypes = ['html']
 
+let g:syntastic_python_flake8_quiet_messages = {'level': 'warnings'}
 let g:syntastic_python_flake8_args = "--max-line-length=100"
 
 let g:syntastic_cpp_check_header = 1
