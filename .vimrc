@@ -66,7 +66,7 @@ else
         let g:syntastic_style_warning_symbol = '>'
 endif
 
-
+inoremap kj <Esc>
 
 au BufNewFile,BufRead *.py setlocal softtabstop=4 shiftwidth=4
 
@@ -85,3 +85,11 @@ let @d='idefault_array_get(^[/[^Mxi, ^[/]^Mr)?default^M'
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
+
+fun! RefreshBuffers()
+  set noconfirm
+  bufdo e!
+  set confirm
+endfun
+
+nmap <leader>gr call RefreshBuffers()
