@@ -34,7 +34,7 @@ let g:ctrlp_use_caching = 1
 let g:ctrlp_clear_cache_on_exit = 0
 "let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git|.pyc'
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|^\.DS_Store',
+  \ 'dir':  '\.git$\|\.hg$\|\.svn$\|^\.DS_Store\|node_modules',
   \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$',
   \ 'link': 'SOME_BAD_SYMBOLIC_LINKS',
 \ }
@@ -79,6 +79,7 @@ au BufNewFile,BufRead *.jinja set ft=htmljinja
 au BufRead,BufNewFile *.md set filetype=markdown
 
 au BufReadPre * if getfsize(expand("%")) > 1000000 | syntax off | endif
+au FileType javascript let b:syntastic_checkers = findfile('.jscsrc', '.;') != '' ? ['jscs'] : ['jshint']
 
 set viminfo=%,'50,\"100,n~/.viminfo
 let @d='idefault_array_get(^[/[^Mxi, ^[/]^Mr)?default^M'
